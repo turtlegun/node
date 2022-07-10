@@ -1,0 +1,5 @@
+const {readFileSync,writeFileSync}=require('fs')
+const read=readFileSync('./content/first.txt','utf8')
+const read2=readFileSync('./content/second.txt','utf8')
+console.log(read,read2)
+writeFileSync('./content/result.txt',`here is the result:  ${read},${read2}` ,{flag:'a'})
